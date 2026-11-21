@@ -1,0 +1,36 @@
+Clean local preparation — 2026-11-21
+
+This copy has no Git history, commits, remote, or active deployment workflow.
+
+Removed from this copy:
+- Tracked .env, IDE state, Maven target output, old Git status backup.
+- External-drive AppleDouble metadata and original .git directory were not copied.
+
+Configuration changes only:
+- Database password: DB_PASSWORD environment variable.
+- JWT signing key: JWT_KEY environment variable; supply a suitable private key value
+  for the existing JwtService configuration before running.
+- Gemini project: optional GEMINI_PROJECT_ID environment variable.
+- Existing Gemini/Groq server keys still use environment variables.
+- Embedded frontend Gemini key removed; empty key disables cloud recognition.
+  No replacement secret or new client credential mechanism was added.
+- Original deployment workflow retained as deploy.yml.disabled.
+
+For backend local configuration, copy backend-calotter/env.template to a local
+.env as described in the template and fill in your own values. Docker Compose
+and run_init_sql.py require DB_PASSWORD in the shell (or Compose's local .env);
+they do not share the Spring .env loader. Never commit real credentials.
+
+Publication status and remaining work:
+- Runtime/build verification, hardcoded frontend server address and authentication.
+- Root Compose's missing database/init.sql reference; backend has separate Compose.
+- Team code and materials have been confirmed by the maintainer as permitted for public release.
+- Revocation/rotation of old credentials by their owner, if still active.
+
+Model, labels, assets, existing third-party licenses and attribution are preserved.
+No business logic was changed. No GitHub upload was performed.
+
+Final publication review: removed a remaining Roboflow credential literal from
+yolo-training/train.py and replaced it with a placeholder. Updated root/client
+README files and corrected inherited backend documentation. No build or runtime
+validation has been performed. No repository-wide license has been selected.
