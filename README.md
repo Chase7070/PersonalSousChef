@@ -17,7 +17,30 @@ The codebase contains implementations for:
 - **Nutrition tracking:** food intake records, nutrition estimates, and daily summaries.
 - **Ingredient recognition:** a bundled YOLO TensorFlow Lite model, with a separate cloud-recognition integration.
 
-These describe the source implementation, not a claim that every feature or platform has passed validation. Demonstration screenshots, video, and verified results will be added after runtime checks.
+These describe the source implementation, not a claim that every feature or platform has passed validation. The screenshots below document the original project; runtime verification of this cleaned copy is still pending.
+
+## Application screenshots
+
+Extracted from the original internship final report (February 2026), Figures 7 and 8. These are historical project screenshots, not evidence of a successful build or end-to-end test of this repository version.
+
+### Interface overview
+
+![Six application screens: nutrition dashboard, recipes, passport-style profile, kitchen inventory, recipe instructions, and ingredient scanning](docs/images/app-overview.png)
+
+From left to right: **dashboard, recipes, profile** (top row); **inventory, cooking instructions, ingredient scanning** (bottom row).
+
+### Otter navigation and profile experience
+
+<p align="center">
+  <img src="docs/images/dashboard-navigation.png" alt="Nutrition dashboard with the Otter navigation expanded to show Home, Recipes, Add, Kitchen, and Me" width="300">
+</p>
+
+The report's **Frontend Integration: Profile UI and Navigational Components** section describes two related interface features:
+
+- **Otter navigation:** a floating navigation component with tooltip bubbles, providing a consistent entry point to Home, Recipes, Add, Kitchen, and Me across features developed by different team members. The screenshot above shows the expanded navigation on the nutrition dashboard.
+- **Passport-style profile:** a personal profile interface with custom page-flip animations and coordinated styling across Settings, Invite, and Edit Profile. It connects personal settings with shared-household settings. The profile screen appears in the top-right panel of the interface overview above.
+
+These descriptions reflect the original report; interactions and animations still need verification in this repository version.
 
 ## Architecture
 
